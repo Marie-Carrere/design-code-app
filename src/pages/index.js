@@ -12,7 +12,15 @@ const IndexPage = () => (
         <h1>Learn to <br />design and code modern applications</h1>
         <p>Complete courses about the best tools and design systems. Prototype and build apps with React and Swift</p>
         <Link to="/page-2/">Watch the video</Link>
-        <svg width="100%" height="172" viewBox="0 0 100 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="Logos">
+          <img src={require('../images/logo-sketch.png')} width="50" alt=""/>
+          <img src={require('../images/logo-figma.png')} width="50" alt=""/>
+          <img src={require('../images/logo-studio.png')} width="50" alt=""/>
+          <img src={require('../images/logo-framer.png')} width="50" alt=""/>
+          <img src={require('../images/logo-react.png')} width="50" alt=""/>
+          <img src={require('../images/logo-swift.png')} width="50" alt=""/>
+        </div>
+        <svg width="2560" height="172" viewBox="0 0 2560 172" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="white">
             <animate repeatCount="indefinite"
               fill="freeze" attributeName="d" dur="10s"
