@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   
-  const handleScroll = (event) => {
+  const handleScroll = () => {
     const scrollTop = window.pageYOffset
     
     if (scrollTop > 50) {
