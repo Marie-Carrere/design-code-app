@@ -1,11 +1,35 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Card from '../components/Card'
 import Section from '../components/Section'
 import Wave from '../components/Wave'
+import staticdata from "../../staticdata.json"
+import Cell from '../components/Cell'
+
+const SectionCaption = styled.p`
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94A4BA;
+  text-align: center;
+`
+
+const SectionCellGroup = styled.div`
+  max-width: 800px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  padding: 0 20px;
+  
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -62,6 +86,16 @@ const IndexPage = () => (
       interactions, dynamic data with Contentful and 
       deploying your site with Netlify."
     />
+    <SectionCaption>12 sections - 6 hours</SectionCaption>
+    <SectionCellGroup>
+      {staticdata.cells.map((cell, id) => (
+        <Cell
+          key={id}
+          title={cell.title}
+          image={cell.image}
+        />
+      ))}
+    </SectionCellGroup>
   </Layout>
 )
 
