@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Design+Code - Learn to design and code React and Swift apps`,
-    description: ``,
+    description: `Complete courses about the best tools and design systems. 
+    Prototype and build apps with React and Swift. `,
     author: ``,
+    keywords: `react course, react for designers, ios development, sketch app, swift app course`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,7 +17,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
+     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -27,8 +29,12 @@ module.exports = {
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `75pgnb8xb0ze`,
+        accessToken: `i5waY1FoUBUZXk_1mYIQqjhXoR-XxOZLznSjcTtkMX8`
+      }
+    }
   ],
 }
